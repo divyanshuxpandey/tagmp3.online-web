@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>MP3 tag editor, add cover image to mp3, change id3 tags</title>
+	<meta name="description" content="Tagmp3.net is a free online mp3 tag editor where you can change id3 tags, edit mp3 image, add cover image to mp3 and change album art." />
+	
+	<meta name="apple-mobile-web-app-title" content="Tagmp3" />
+	<meta property="fb:app_id" content="2291526731101380" />
+	<meta http-equiv="Cache-control" content="public">
+	<meta name="google-site-verification" content="fCAtK0z1swMNssBsMIA74tPw3FKyllalZRDgSm_o4-o" />
+	<meta name="theme-color" content="#d1ecf1"/>
+	<meta property="og:title" content="MP3 tag editor - tag mp3 files online | the best id3 tag editor" />
+	<meta property="og:description" content="Tagmp3.net is a free mp3 tag editor available online where you can change id3 tags, edit mp3 image, add album art to mp3 and change mp3 cover image." />
+	<meta property="og:url" content="https://tagmp3.net/" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Tagmp3" />
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@Tagmp31">
+	<meta name="twitter:title" content="MP3 tag editor - tag mp3 files online | the best id3 tag editor">
+	<meta name="twitter:description" content="Tagmp3.net is a free mp3 tag editor available online where you can change id3 tags, edit mp3 image, add album art to mp3 and change mp3 cover image.">
+	<link rel="alternate" hreflang="hi" href="https://tagmp3.net/hi/"/>
+	<link rel="alternate" hreflang="ar" href="https://tagmp3.net/ar/"/>
+	<link rel="alternate" hreflang="fa" href="https://tagmp3.net/fa/"/>
+	<link rel="alternate" hreflang="ru" href="https://tagmp3.net/ru/"/>
+	<link rel="alternate" hreflang="ur" href="https://tagmp3.net/ur/"/>
+	<link rel="alternate" hreflang="zh-hans" href="https://tagmp3.net/cn/"/>
+	<link rel="alternate" hreflang="it" href="https://tagmp3.net/it/"/>
+	<link rel="alternate" hreflang="nl" href="https://tagmp3.net/de/"/>
+	<link rel="alternate" hreflang="fr" href="https://tagmp3.net/fr/"/>
+	<link rel="alternate" hreflang="ms" href="https://tagmp3.net/ms/"/>
+	<link rel="alternate" hreflang="id" href="https://tagmp3.net/id/"/>
+	<link rel="alternate" hreflang="pt" href="https://tagmp3.net/pt/"/>
+	<link rel="alternate" hreflang="es" href="https://tagmp3.net/es/"/>
+	<link rel="canonical" href="https://tagmp3.net/" />
+	<link rel="apple-touch-icon" href="/images/tagmp3-60x60.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="/images/tagmp3-76x76.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="/images/tagmp3-120x120.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="/images/tagmp3-152x152.png" />
+	<meta property="og:image" content="https://tagmp3.net/images/tagmp3-1200x630.png" />
+	<meta property="og:image:alt" content="MP3 tag editor - tag mp3 files online | tagmp3.net">
+	<meta property="og:image:type" content="image/png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta name="twitter:image" content="https://tagmp3.net/images/tagmp3-1200x630.png" />
+	<meta name="twitter:image:alt" content="MP3 tag editor - tag mp3 files online | tagmp3.net" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-title" content="Tagmp3" />
+    <meta name="author" content="Tagmp3" />
+	<link rel="icon" sizes="16x16 32x32" href="/favicon.ico" />
+
+	<style>
+	#loader {position:fixed; width:100%; height:100%; background:#fff; z-index:1000; }
+	.loader {border: 16px solid #f3f3f3; border-top: 16px solid #3498db; border-radius: 50%; width: 120px; height: 120px; animation: spin 2s linear infinite; position:fixed; left:50%; margin-left:-60px; top:50%; margin-top:-60px; }
+	@keyframes spin {
+	  0% { transform: rotate(0deg); }
+	  100% { transform: rotate(360deg); }
+	}
+	@font-face{font-family:FontAwesome;src:url(/fontawesome-webfont.eot?v=4.7.0);src:url(/fontawesome-webfont.eot?#iefix&v=4.7.0) format('embedded-opentype'),url(/fontawesome-webfont.woff2?v=4.7.0) format('woff2'),url(/fontawesome-webfont.woff?v=4.7.0) format('woff'),url(/fontawesome-webfont.ttf?v=4.7.0) format('truetype'),url(/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular) format('svg');font-weight:400;font-style:normal;font-display:swap}.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fa-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-ul{padding-left:0;margin-left:2.14285714em;list-style-type:none}.fa-ul>li{position:relative}.fa-li{position:absolute;left:-2.14285714em;width:2.14285714em;top:.14285714em;text-align:center}.fa-li.fa-lg{left:-1.85714286em}.fa-border{padding:.2em .25em .15em;border:solid .08em #eee;border-radius:.1em}.fa-spin{-webkit-animation:fa-spin 2s infinite linear;animation:fa-spin 2s infinite linear}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}.fa-rotate-90{-webkit-transform:rotate(90deg);-ms-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{-webkit-transform:rotate(270deg);-ms-transform:rotate(270deg);transform:rotate(270deg)}:root .fa-rotate-180,:root .fa-rotate-270,:root .fa-rotate-90{filter:none}.fa-music:before{content:"\f001"}.fa-user:before{content:"\f007"}.fa-th-large:before{content:"\f009"}.fa-th:before{content:"\f00a"}.fa-th-list:before{content:"\f00b"}.fa-close:before,.fa-remove:before,.fa-times:before{content:"\f00d"}.fa-home:before{content:"\f015"}.fa-file-o:before{content:"\f016"}.fa-download:before{content:"\f019"}.fa-rotate-right:before{content:"\f01e"}.fa-list-alt:before{content:"\f022"}.fa-tag:before{content:"\f02b"}.fa-tags:before{content:"\f02c"}.fa-font:before{content:"\f031"}.fa-text-height:before{content:"\f034"}.fa-text-width:before{content:"\f035"}.fa-list:before{content:"\f03a"}.fa-image:before,.fa-photo:before,.fa-picture-o:before{content:"\f03e"}.fa-edit:before{content:"\f044"}.fa-times-circle:before{content:"\f057"}.fa-info-circle:before{content:"\f05a"}.fa-times-circle-o:before{content:"\f05c"}.fa-arrow-left:before{content:"\f060"}.fa-arrow-right:before{content:"\f061"}.fa-expand:before{content:"\f065"}.fa-warning:before{content:"\f071"}.fa-random:before{content:"\f074"}.fa-upload:before{content:"\f093"}.fa-phone:before{content:"\f095"}.fa-twitter:before{content:"\f099"}.fa-facebook-f:before,.fa-facebook:before{content:"\f09a"}.fa-github:before{content:"\f09b"}.fa-arrow-circle-left:before{content:"\f0a8"}.fa-arrow-circle-right:before{content:"\f0a9"}.fa-group:before{content:"\f0c0"}.fa-link:before{content:"\f0c1"}.fa-files-o:before{content:"\f0c5"}.fa-list-ul:before{content:"\f0ca"}.fa-list-ol:before{content:"\f0cb"}.fa-rotate-left:before{content:"\f0e2"}.fa-user-md:before{content:"\f0f0"}.fa-file-text-o:before{content:"\f0f6"}.fa-mobile-phone:before,.fa-mobile:before{content:"\f10b"}.fa-circle-o:before{content:"\f10c"}.fa-spinner:before{content:"\f110"}.fa-circle:before{content:"\f111"}.fa-github-alt:before{content:"\f113"}.fa-code:before{content:"\f121"}.fa-info:before{content:"\f129"}.fa-maxcdn:before{content:"\f136"}.fa-html5:before{content:"\f13b"}.fa-css3:before{content:"\f13c"}.fa-toggle-right:before{content:"\f152"}.fa-file:before{content:"\f15b"}.fa-file-text:before{content:"\f15c"}.fa-tumblr:before{content:"\f173"}.fa-apple:before{content:"\f179"}.fa-windows:before{content:"\f17a"}.fa-android:before{content:"\f17b"}.fa-arrow-circle-o-right:before{content:"\f18e"}.fa-arrow-circle-o-left:before{content:"\f190"}.fa-toggle-left:before{content:"\f191"}.fa-google:before{content:"\f1a0"}.fa-reddit:before{content:"\f1a1"}.fa-language:before{content:"\f1ab"}.fa-file-image-o:before,.fa-file-photo-o:before,.fa-file-picture-o:before{content:"\f1c5"}.fa-file-code-o:before{content:"\f1c9"}.fa-support:before{content:"\f1cd"}.fa-header:before{content:"\f1dc"}.fa-copyright:before{content:"\f1f9"}.fa-toggle-off:before{content:"\f204"}.fa-toggle-on:before{content:"\f205"}.fa-server:before{content:"\f233"}.fa-user-times:before{content:"\f235"}.fa-500px:before{content:"\f26e"}.fa-percent:before{content:"\f295"}.fa-fa:before,.fa-font-awesome:before{content:"\f2b4"}.fa-user-circle:before{content:"\f2bd"}.fa-user-circle-o:before{content:"\f2be"}.fa-user-o:before{content:"\f2c0"}.fa-id-card:before{content:"\f2c2"}.fa-id-card-o:before{content:"\f2c3"}.fa-s15:before{content:"\f2cd"}.fa-window-close:before{content:"\f2d3"}.fa-window-close-o:before{content:"\f2d4"}	</style>
+	
+	
+	
+	
+  </head>
+  <body>
+	<div id='loader'>
+		<div class='loader'></div>
+	</div>
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top" id="navbar">
+		<div class="container">
+			<a class="navbar-brand" href="/">
+				<img src="/images/logo-small.png" width='122' height='36' alt="tagmp3">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="/">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/how-it-works.php">How it works?</a>
+					</li>
+					<!--<li class="nav-item">
+						<a class="nav-link" href="/convertir/mp4-a-mp3">Convertir</a>
+					</li>-->
+					<!--<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Convert</a>
+						<div class="dropdown-menu" aria-labelledby="contactDropdown">
+							<a class="dropdown-item" href="/convert/mp4-to-mp3">MP4 to MP3</a>
+							<a class="dropdown-item" href="/convert/wav-to-mp3">WAV to MP3</a>
+							<a class="dropdown-item" href="/convert/aac-to-mp3">AAC to MP3</a>
+							<a class="dropdown-item" href="/convert/m4a-to-mp3">M4A to MP3</a>
+							<a class="dropdown-item" href="/convert/wma-to-mp3">WMA to MP3</a>
+							<a class="dropdown-item" href="/convert/3gp-to-mp3">3GP to MP3</a>
+							<a class="dropdown-item" href="/convert/ogv-to-mp3">OGV to MP3</a>
+						</div>
+					</li>-->
+					
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="contactDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact</a>
+						<div class="dropdown-menu" aria-labelledby="contactDropdown">
+							<a class="dropdown-item" href="/contact.php">Contact Us</a>
+							<a class="dropdown-item" href='/privacy-policy.php'>Privacy Policy</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="/">English</a>
+							<div class="dropdown-divider"></div>
+															<a class="dropdown-item" href='/ar/'>عربى</a>
+																<a class="dropdown-item" href='/cn/'>中文</a>
+																<a class="dropdown-item" href='/de/'>Deutsche</a>
+																<a class="dropdown-item" href='/es/'>Español</a>
+																<a class="dropdown-item" href='/fa/'>فارسی</a>
+																<a class="dropdown-item" href='/fil/'>Filipino</a>
+																<a class="dropdown-item" href='/fr/'>français</a>
+																<a class="dropdown-item" href='/hi/'>हिंदी</a>
+																<a class="dropdown-item" href='/id/'>Indonesian</a>
+																<a class="dropdown-item" href='/it/'>italiano</a>
+																<a class="dropdown-item" href='/ja/'>日本語</a>
+																<a class="dropdown-item" href='/ms/'>Malay</a>
+																<a class="dropdown-item" href='/pt/'>Português</a>
+																<a class="dropdown-item" href='/ru/'>русский</a>
+																<a class="dropdown-item" href='/th/'>ไทย</a>
+																<a class="dropdown-item" href='/ur/'>اردو</a>
+														</div>
+					</li>
+				</ul>
+			</div>
+	  </div>
+	</nav>	<main class="container" id='container'>
+		
+		
+		<h1 class="my-3 text-center">Welcome to the free online mp3 tag editor</h1>
+		<div class='alert alert-info text-center'>If you are looking for mp3 tag editor, mp3 tagger or want to change album cover in mp3 or add photo to your music, then tagmp3.net is made for you. Just upload your mp3 files below and proceed to customize the id3 tags (album art, genre, title, artist, comments and more).</div>
+			<div class='tagsadd my-3'></div>
+	<ul class="nav nav-tabs mb-3" role="tablist">
+		<li class="nav-item">
+			<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-selected="true">
+				<i class="fa fa-upload"></i>
+				Upload Files
+			</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" id="profile-tab" data-toggle="tab" href="#menu1" role="tab" aria-selected="false">
+				<i class="fa fa-link"></i>
+				Enter URL
+			</a>
+		</li>
+	</ul>
+	
+	<div class="tab-content" id="myTabContent">
+		<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+			<div id="drag-and-drop-zone" class="dm-uploader p-2">
+				
+				
+					
+				<h3 class="my-3 text-muted">Drag &amp; drop files here</h3>
+				<div class="btn btn-info my-3">
+					<span>Choose Files</span>
+					<input type="file" accept="audio/*" title='Click to add Files' />
+				</div>
+				<small><div class="alert alert-info" role="alert">
+					Allowed file types: Audio/*, Video/*
+				</div></small>
+								<div class="p-3 font-weight-light" id="tagCount">Files updated this year: <span class="badge badge-light font-weight-normal">5,975,659</span></div>
+
+			</div>
+		</div>
+		<div class="tab-pane fade my-4 text-center" id="menu1" role="tabpanel" aria-labelledby="profile-tab">
+			<form method='post' action='handle.php'>
+				<div class="input-group input-group-lg">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="inputGroup-sizing-lg">Enter URL</span>
+					</div>
+					<input type="text" name='filepath' class="form-control" aria-label="Large">
+				</div>
+				<button type="submit" class="btn btn-info btn-lg my-3 w-50"><i class="fa fa-arrow-circle-right"></i> Proceed</button>
+			</form>
+		</div>
+	</div>
+	<div class="card" id="progress">
+		<div class="card-header">
+			<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+			Uploading Files
+		</div>
+		<ul class="list-unstyled p-2 d-flex flex-column col" id="files">
+			<li class="text-muted text-center empty">No files uploaded.</li>
+		</ul>
+	</div>		
+	<div class='text-center my-2 small' id="simple"><a href='javascript:simple();' >Unable to upload? Try simple file upload.</a></div>
+	
+	
+	
+	
+	
+	
+	<form class='kaios' id='kaiform' method='post' action='simpleUpload.php' enctype="multipart/form-data" >
+		<input id="file" type='file' name='file'>
+		<div id="submitBtn"><input type='submit' value='Upload'></div>
+	</form>
+	
+	<div class='tagsadd my-3'></div>
+		
+	<script>
+	document.getElementById("file").onchange = function() {
+		
+		document.getElementById("kaiform").submit();
+		document.getElementById("submitBtn").innerHTML="<div class='text-center my-3'><img src='/images/uploading.gif' /><br>Uploading, please wait....</div>";
+		$("#file").hide();
+	}
+	function simple(){
+		$("#simple").hide();
+		$("#kaiform").fadeIn();
+		$("#myTabContent").hide();
+		$(".nav-tabs").hide();
+		$(window).scrollTop(0);
+	}
+	</script>
+			<p class="lead my-4 text">
+			TAGMP3.NET is a free website where you can change music tags, <strong>change album art</strong>, and other ID3 (ID3v1, ID3v2) tags. So if you are searching for a music tagging software then this website is your best destination. You don't need to download or install any software/app to change id3 tags of your mp3 files. You can edit audio metadata and customize common id3 tags easily by uploading your music files here.
+		</p>
+		<p class='lead my-4 text'>
+			Tagmp3 is an easy to use id3 tag editor because it auto detects id3v1 and id3v2 version, and automatically updates to id3v2 even if your uploaded file is outdated to id3v1. The advantage of id3v2 is that it is more detailed and you can enter lots of information like album art, genre, title, album, release year, and comments etc.
+		</p>
+		
+		<div class="alert alert-secondary text-center" role="alert">
+			<a href='/how-it-works.php'>Watch this video tutorial to learn how you can change id3 tags online</a>
+		</div>
+		<div class='my-5'><img src='images/id3-tag-editor.webp' class='img-fluid' alt='id3 tag editor' /></div>
+		<h2>Why tagmp3.net is a good music tag editor?</h2>
+		<p class='lead my-4 text'>
+			It is the best music metadata editor because it allows different music types. You are free to upload whatever file type, either it is a video or an audio having any encoding format and our system will converts different media types to mp3, and then insert id3v2 sample tags. Then, on second step, you can change all tags of uploaded music file(s).
+		</p>
+		<h3>Supported File Types:</h3>
+		<p class='lead my-4 text'>
+			Tagmp3.net supports almost all audio/video formats including mp3, mp4, m4a, flac, aac, ogg, ogv, wma, wav, amr, m4r, 3gp, 3gpp, aiff, mid, mpeg, webm, mov and ts. If you have any other format that you want us to add support, please feel free to <a href='/contact.php'>contact us</a>, and we will try to add it as soon as possible.
+		</p>
+		<h3>What are ID3 tags?</h3>
+		<p class='lead my-4 text'>
+			ID3 tags are set of information such as the title, artist, album, track number, and some other information that is stored in the MP3 file itself. There are two different versions of ID3 that are ID3v1 and ID3v2.
+		<p>
+		
+		<p class='lead my-4 text'>
+			 ID3v1 containes fixed set of informational fields and it is stored at the end of an MP3 in form of 128-byte segment. There is an advance version of ID3v1 which is ID3v1.1 and it contains slight modification which adds a "track number" field and also there is a slight shortening of the "comment" field. ID3v2 very different from ID3v1 if we compare structures of both versions. It contains an extensible set of "frames" which is located at the start of the file. Each frame is recognized by an identifier (a three- or four-byte string) and one piece of data. There are standard frames for containing album cover art, BPM, lyrics, copyright, and arbitrary text and URL data, as well as other tags. ID3v2 has been extended to 3 versions so far, and each new version contains new frame definitions.
+		</p>
+		
+		<h3>The mp3 tagger that works everywhere</h3>
+		<p class='lead my-4 text'>
+			The biggest advantage of <a href='/'>tagmp3.net</a> is that it works on all platforms. Either you are on a mac, windows, or a mobile (iPhone/Android/others), all you need is an internet browser where you can visit tagmp3.net and change your music tags instantly.
+		</p>
+		<p class='lead my-4 text'>
+			You can upload single or multiple files. To select multiple files, you can press and hold <strong>&lt;Shift&gt;</strong>, or <strong>&lt;Ctrl&gt;</strong> key, or use mouse drag and drop your music files.
+		</p>
+		
+		<p class='lead my-4 text'>
+			So, tagmp3.net is the best <strong>music tagging software</strong> which can be used to insert picture into mp3 files, change existing image and update all other song information by uploading your music files.
+		</p>
+		<h2>FAQs</H2>
+		<p class='lead my-4 text'>
+			<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+				<h4 itemprop="name">How to add album art to mp3?</h4>
+				<div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+				  <div itemprop="text" class='lead text'>
+					You can <strong>add album art to mp3</strong> using tagmp3.net. Visit <a href='https://tagmp3.net'>tagmp3 dot net</a> website, upload your mp3 file, and in second step you can upload album art that you want to add to the mp3 file. Then in third step, you can download your updated mp3 file.
+				  </div>
+				</div>
+			  </div>
+			  <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+				<h4 itemprop="name" class='mt-4'>How do I change album art on Android or iPhone?</h4>
+				<div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+				  <div itemprop="text" class='lead text'>
+					Tagmp3.net is a free website where you can change album art of your audio files. This website is compatible with all kind of devices including Android, iPhone, Windows 10, Linux etc. You can visit <a href='https://tagmp3.net'>tagmp3</a> website in any browser, upload you audio songs, and you will see current album art if there is any, and upload your custom album art. After uploading your custom album art, you can proceed to download your updated file.
+				</div>
+			  </div>
+			</div>
+			<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+			  <h4 itemprop="name" class='mt-4'>Can you edit iPhone album artwork?</h4>
+			  <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+				<div itemprop="text" class='lead text'>
+				  The answer is yes. If you are an iPhone user, you can edit album artwork easily using <a href='https://tagmp3.net'>tag mp3 net</a>. You can open tagmp3.net in Safari or any other browser, upload your files and edit the album artowrk. You can see existing artowrk and upload your desired cover imager which will replace existing image, and then you can download the updated file.
+				  </div>
+			  </div>
+			</div>
+			<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+			  <h4 itemprop="name" class='mt-4'>How to add thumbnail to song?</h4>
+			  <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+				<div itemprop="text" class='lead text'>
+				  Adding thumbnail to songs is very easy. You can use any id3 tag editor, or visit tag mp3 website, upload your songs, and then upload thumbnail file and this free tool will generate new file with provided thumbnail for you that you can download.
+				  </div>
+			  </div>
+			</div>
+		</p>
+		<p>
+			So, if you are a music producer, then this tool is quite handy for you either you produce music for <a href='https://playfireboywatergirl.com' target='_blank'>games</a>, movies, tv, or custom requests. Just upload your music and personalize it by adding your own id3 tags.
+		</p>
+		
+		
+		<div class="modal fade" id="fileTypeError">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Invalid File Type</h4>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+					</div>
+					<div class="modal-body">Modal body..</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<!-- Footer -->
+<footer class='mt-5 text-white' id='footer'>
+
+	
+	<div class='container mb-3 small'>
+				
+	</div>
+	
+	<div class='bg-dark'>
+		<div class='container '>
+			<div class="col-md-12 py-3">
+				<div class="float-right social">
+					<a href="https://www.facebook.com/tagmp3" rel="noreferrer" target="_blank" aria-label='Facebook' class="fa fa-facebook text-white px-2"></a>
+					<a href="https://twitter.com/Tagmp31" rel="noreferrer" target="_blank" aria-label='Twitter' class="fa fa-twitter text-white px-2"></a>
+					<a href="https://www.reddit.com/user/tagmp3/" rel="noreferrer" target="_blank" aria-label='Reddit' class="fa fa-reddit text-white px-2"></a>
+					
+				</div>
+				© 2023 Copyright: <a href='/'>tagmp3.net</a>
+				
+				
+			</div>
+		</div>
+	</div>
+
+</footer>
+<!-- Footer -->
+
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/styles.css?v=2.3.4">
+	<script>
+	/*
+ * dmUploader - jQuery Ajax File Uploader Widget
+ * https://github.com/danielm/uploader
+ *
+ * Copyright Daniel Morales <daniel85mg@gmail.com>
+ * Released under the MIT license.
+ * https://github.com/danielm/uploader/blob/master/LICENSE.txt
+ *
+ * @preserve
+ */
+!function(e){"use strict";"function"==typeof define&&define.amd?define(["jquery"],e):"undefined"!=typeof exports?module.exports=e(require("jquery")):e(window.jQuery)}(function(e){"use strict";var t="dmUploader",n=0,i=1,s=2,o=3,r=4,u={auto:!0,queue:!0,dnd:!0,hookDocument:!0,multiple:!0,url:document.URL,method:"POST",extraData:{},headers:{},dataType:null,fieldName:"file",maxFileSize:0,allowedTypes:"*",extFilter:null,onInit:function(){},onComplete:function(){},onFallbackMode:function(){},onNewFile:function(){},onBeforeUpload:function(){},onUploadProgress:function(){},onUploadSuccess:function(){},onUploadCanceled:function(){},onUploadError:function(){},onUploadComplete:function(){},onFileTypeError:function(){},onFileSizeError:function(){},onFileExtError:function(){},onDragEnter:function(){},onDragLeave:function(){},onDocumentDragEnter:function(){},onDocumentDragLeave:function(){}},a=function(e,t){this.data=e,this.widget=t,this.jqXHR=null,this.status=n,this.id=Math.random().toString(36).substr(2)};a.prototype.upload=function(){var t=this;if(!t.canUpload())return t.widget.queueRunning&&t.status!==i&&t.widget.processQueue(),!1;var n=new FormData;n.append(t.widget.settings.fieldName,t.data);var s=t.widget.settings.extraData;return"function"==typeof s&&(s=s.call(t.widget.element,t.id)),e.each(s,function(e,t){n.append(e,t)}),t.status=i,t.widget.activeFiles++,t.widget.settings.onBeforeUpload.call(t.widget.element,t.id),t.jqXHR=e.ajax({url:t.widget.settings.url,type:t.widget.settings.method,dataType:t.widget.settings.dataType,data:n,headers:t.widget.settings.headers,cache:!1,contentType:!1,processData:!1,forceSync:!1,xhr:function(){return t.getXhr()},success:function(e){t.onSuccess(e)},error:function(e,n,i){t.onError(e,n,i)},complete:function(){t.onComplete()}}),!0},a.prototype.onSuccess=function(e){this.status=s,this.widget.settings.onUploadSuccess.call(this.widget.element,this.id,e)},a.prototype.onError=function(e,t,n){this.status!==r&&(this.status=o,this.widget.settings.onUploadError.call(this.widget.element,this.id,e,t,n))},a.prototype.onComplete=function(){this.widget.activeFiles--,this.status!==r&&this.widget.settings.onUploadComplete.call(this.widget.element,this.id),this.widget.queueRunning?this.widget.processQueue():this.widget.settings.queue&&0===this.widget.activeFiles&&this.widget.settings.onComplete.call(this.element)},a.prototype.getXhr=function(){var t=this,n=e.ajaxSettings.xhr();return n.upload&&n.upload.addEventListener("progress",function(e){var n=0,i=e.loaded||e.position,s=e.total||e.totalSize;e.lengthComputable&&(n=Math.ceil(i/s*100)),t.widget.settings.onUploadProgress.call(t.widget.element,t.id,n)},!1),n},a.prototype.cancel=function(e){e=void 0!==e&&e;var t=this.status;return!!(t===i||e&&t===n)&&(this.status=r,this.widget.settings.onUploadCanceled.call(this.widget.element,this.id),t===i&&this.jqXHR.abort(),!0)},a.prototype.canUpload=function(){return this.status===n||this.status===o};var l=function(t,n){return this.element=e(t),this.settings=e.extend({},u,n),this.checkSupport()?(this.init(),this):(e.error("Browser not supported by jQuery.dmUploader"),this.settings.onFallbackMode.call(this.element),!1)};l.prototype.checkSupport=function(){if(void 0===window.FormData)return!1;return!new RegExp("/(Android (1.0|1.1|1.5|1.6|2.0|2.1))|(Windows Phone (OS 7|8.0))|(XBLWP)|(ZuneWP)|(w(eb)?OSBrowser)|(webOS)|(Kindle/(1.0|2.0|2.5|3.0))/").test(window.navigator.userAgent)&&!e('<input type="file" />').prop("disabled")},l.prototype.init=function(){var n=this;this.queue=[],this.queuePos=-1,this.queueRunning=!1,this.activeFiles=0,this.draggingOver=0,this.draggingOverDoc=0;var i=n.element.is("input[type=file]")?n.element:n.element.find("input[type=file]");return i.length>0&&(i.prop("multiple",this.settings.multiple),i.on("change."+t,function(t){var i=t.target&&t.target.files;i&&i.length&&(n.addFiles(i),e(this).val(""))})),this.settings.dnd&&this.initDnD(),0!==i.length||this.settings.dnd?(this.settings.onInit.call(this.element),this):(e.error("Markup error found by jQuery.dmUploader"),null)},l.prototype.initDnD=function(){var n=this;n.element.on("drop."+t,function(e){e.preventDefault(),n.draggingOver>0&&(n.draggingOver=0,n.settings.onDragLeave.call(n.element));var t=e.originalEvent&&e.originalEvent.dataTransfer;if(t&&t.files&&t.files.length){var i=[];n.settings.multiple?i=t.files:i.push(t.files[0]),n.addFiles(i)}}),n.element.on("dragenter."+t,function(e){e.preventDefault(),0===n.draggingOver&&n.settings.onDragEnter.call(n.element),n.draggingOver++}),n.element.on("dragleave."+t,function(e){e.preventDefault(),n.draggingOver--,0===n.draggingOver&&n.settings.onDragLeave.call(n.element)}),n.settings.hookDocument&&(e(document).off("drop."+t).on("drop."+t,function(e){e.preventDefault(),n.draggingOverDoc>0&&(n.draggingOverDoc=0,n.settings.onDocumentDragLeave.call(n.element))}),e(document).off("dragenter."+t).on("dragenter."+t,function(e){e.preventDefault(),0===n.draggingOverDoc&&n.settings.onDocumentDragEnter.call(n.element),n.draggingOverDoc++}),e(document).off("dragleave."+t).on("dragleave."+t,function(e){e.preventDefault(),n.draggingOverDoc--,0===n.draggingOverDoc&&n.settings.onDocumentDragLeave.call(n.element)}),e(document).off("dragover."+t).on("dragover."+t,function(e){e.preventDefault()}))},l.prototype.releaseEvents=function(){this.element.off("."+t),this.element.find("input[type=file]").off("."+t),this.settings.hookDocument&&e(document).off("."+t)},l.prototype.validateFile=function(t){if(this.settings.maxFileSize>0&&t.size>this.settings.maxFileSize)return this.settings.onFileSizeError.call(this.element,t),!1;if("*"!==this.settings.allowedTypes&&!t.type.match(this.settings.allowedTypes))return this.settings.onFileTypeError.call(this.element,t),!1;if(null!==this.settings.extFilter){var n=t.name.toLowerCase().split(".").pop();if(e.inArray(n,this.settings.extFilter)<0)return this.settings.onFileExtError.call(this.element,t),!1}return new a(t,this)},l.prototype.addFiles=function(e){for(var t=0,n=0;n<e.length;n++){var i=this.validateFile(e[n]);if(i){!1!==this.settings.onNewFile.call(this.element,i.id,i.data)&&(this.settings.auto&&!this.settings.queue&&i.upload(),this.queue.push(i),t++)}}return 0===t?this:(this.settings.auto&&this.settings.queue&&!this.queueRunning&&this.processQueue(),this)},l.prototype.processQueue=function(){return this.queuePos++,this.queuePos>=this.queue.length?(0===this.activeFiles&&this.settings.onComplete.call(this.element),this.queuePos=this.queue.length-1,this.queueRunning=!1,!1):(this.queueRunning=!0,this.queue[this.queuePos].upload())},l.prototype.restartQueue=function(){this.queuePos=-1,this.queueRunning=!1,this.processQueue()},l.prototype.findById=function(e){for(var t=!1,n=0;n<this.queue.length;n++)if(this.queue[n].id===e){t=this.queue[n];break}return t},l.prototype.cancelAll=function(){var e=this.queueRunning;this.queueRunning=!1;for(var t=0;t<this.queue.length;t++)this.queue[t].cancel();e&&this.settings.onComplete.call(this.element)},l.prototype.startAll=function(){if(this.settings.queue)this.restartQueue();else for(var e=0;e<this.queue.length;e++)this.queue[e].upload()},l.prototype.methods={start:function(t){if(this.queueRunning)return!1;var i=!1;return void 0===t||(i=this.findById(t))?i?(i.status===r&&(i.status=n),i.upload()):(this.startAll(),!0):(e.error("File not found in jQuery.dmUploader"),!1)},cancel:function(t){var n=!1;return void 0===t||(n=this.findById(t))?n?n.cancel(!0):(this.cancelAll(),!0):(e.error("File not found in jQuery.dmUploader"),!1)},reset:function(){return this.cancelAll(),this.queue=[],this.queuePos=-1,this.activeFiles=0,!0},destroy:function(){this.cancelAll(),this.releaseEvents(),this.element.removeData(t)}},e.fn.dmUploader=function(n){var i=arguments;if("string"!=typeof n)return this.each(function(){e.data(this,t)||e.data(this,t,new l(this,n))});this.each(function(){var s=e.data(this,t);s instanceof l?"function"==typeof s.methods[n]?s.methods[n].apply(s,Array.prototype.slice.call(i,1)):e.error("Method "+n+" does not exist in jQuery.dmUploader"):e.error("Unknown plugin data found by jQuery.dmUploader")})}});
+function ui_add_log(message, color)
+{
+  var d = new Date();
+
+  var dateString = (('0' + d.getHours())).slice(-2) + ':' +
+    (('0' + d.getMinutes())).slice(-2) + ':' +
+    (('0' + d.getSeconds())).slice(-2);
+
+  color = (typeof color === 'undefined' ? 'muted' : color);
+
+  var template = $('#debug-template').text();
+  template = template.replace('%%date%%', dateString);
+  template = template.replace('%%message%%', message);
+  template = template.replace('%%color%%', color);
+  
+  $('#debug').find('li.empty').fadeOut(); // remove the 'no messages yet'
+  $('#debug').prepend(template);
+}
+function ui_multi_add_file(id, file)
+{
+  var template = $('#files-template').text();
+  template = template.replace('%%filename%%', file.name);
+
+  template = $(template);
+  template.prop('id', 'uploaderFile' + id);
+  template.data('file-id', id);
+
+  $('#files').find('li.empty').fadeOut(); // remove the 'no files yet'
+  $('#files').append(template);
+}
+
+// Changes the status messages on our list
+function ui_multi_update_file_status(id, status, message)
+{
+  $('#uploaderFile' + id).find('span').html(message).prop('class', 'status text-' + status);
+}
+
+// Updates a file progress, depending on the parameters it may animate it or change the color.
+function ui_multi_update_file_progress(id, percent, color, active)
+{
+  color = (typeof color === 'undefined' ? false : color);
+  active = (typeof active === 'undefined' ? true : active);
+
+  var bar = $('#uploaderFile' + id).find('div.progress-bar');
+
+  bar.width(percent + '%').attr('aria-valuenow', percent);
+  bar.toggleClass('progress-bar-striped progress-bar-animated', active);
+
+  if (percent === 0){
+    bar.html('');
+  } else {
+    bar.html(percent + '%');
+  }
+
+  if (color !== false){
+    bar.removeClass('bg-success bg-info bg-warning bg-danger');
+    bar.addClass('bg-' + color);
+  }
+}
+function agree(){
+	$.ajax("https://tagmp3.net/agree.php").done(function(){
+		$(".gdpr").fadeOut();
+	});
+}
+$(function(){
+	files=[];
+	
+  $('#drag-and-drop-zone').dmUploader({
+    url: '/upload.php',
+    maxFileSize: 60000000, // 3 Megs 
+	//extFilter: ['mp3', 'MP3','Mp3','mP3'],
+	//allowedTypes: "audio/*",
+    onDragEnter: function(){
+      // Happens when dragging something over the DnD area
+      this.addClass('active');
+    },
+    onDragLeave: function(){
+      // Happens when dragging something OUT of the DnD area
+      this.removeClass('active');
+    },
+    onInit: function(){
+      // Plugin is ready to use
+      ui_add_log('Penguin initialized :)', 'info');
+    },
+    onComplete: function(){
+		
+      // All files in the queue are processed (success or error)
+      //ui_add_log('All pending tranfers finished');
+	  if(files.length>0){
+		  var $form = $("<form method='POST' target='_parent' >").attr("action", "tags.php");
+		  for(var count=0;count<files.length;count++){
+			  $("<input type='hidden'>")
+				.attr("name", "file"+count)
+				.attr("value", files[count])
+				.appendTo($form); 
+			
+		  }
+		   $("<input type='hidden'>")
+				.attr("name", "filesCount")
+				.attr("value", files.length)
+				.appendTo($form); 
+		  $form.appendTo("body");
+			$form.submit(); 
+	  }
+    },
+    onNewFile: function(id, file){
+      // When a new file is added using the file selector or the DnD area
+      //ui_add_log('New file added #' + id);
+	  
+	 
+	  var types=[
+			"",
+			"audio/mpeg",
+			"audio/mp3",
+			"audio/vnd.dlna.adts",
+			"audio/mp4",
+			"audio/x-ms-wma",
+			"audio/x-m4a",
+			"application/octet-stream",
+			"audio/aac",
+			"audio/wav",
+			"audio/x-wav",
+			"audio/amr",
+			"audio/x-aiff",
+			"audio/flac",
+			"audio/x-flac",
+			"audio/ogg",
+			"audio/x-m4r",
+			"audio/3gpp",
+			"audio/AMR",
+			"audio/mid",
+			
+			"video/quicktime",
+			"video/3gpp",
+			"video/ogg",
+			"video/webm",
+			"video/mpeg",
+			"video/vnd.dlna.mpeg-tts",
+			"video/mp4"
+			];
+		
+		if(types.indexOf(file.type)!=-1){
+			  ui_multi_add_file(id, file);
+			  //files.push(file.name);
+			  
+			  $("#drag-and-drop-zone").hide();
+			  $("#progress").fadeIn();
+		  }else{
+			  
+			  $("#fileTypeError .modal-body").html("The file <b>"+file.name+"</b> is not allowed. Please upload Music files only. Current File Type: "+file.type);
+			  $('#fileTypeError').modal('show');
+			  if(file.type=="image/jpeg"||file.type=="image/gif"||file.type=="image/png"){
+				  //ignoreCase
+				  
+			  }else{
+				report("Invalid Type: "+file.type+" - Name: "+file.name);
+			  }
+		}
+    },
+    onBeforeUpload: function(id){
+      // about tho start uploading a file
+      ui_add_log('Starting the upload of #' + id);
+      ui_multi_update_file_status(id, 'uploading', 'Uploading...');
+      ui_multi_update_file_progress(id, 0, '', true);
+    },
+    onUploadCanceled: function(id) {
+      // Happens when a file is directly canceled by the user.
+      ui_multi_update_file_status(id, 'warning', 'Canceled by User');
+      ui_multi_update_file_progress(id, 0, 'warning', false);
+    },
+    onUploadProgress: function(id, percent){
+      // Updating file progress
+      ui_multi_update_file_progress(id, percent);
+    },
+    onUploadSuccess: function(id, data){
+      // A file was successfully uploaded
+	  files.push(data.path);
+      ui_add_log('Server Response for file #' + id + ': ' + JSON.stringify(data));
+      ui_add_log('Upload of file #' + id + ' COMPLETED', 'success');
+      ui_multi_update_file_status(id, 'success', 'Upload Complete');
+      ui_multi_update_file_progress(id, 100, 'success', false);
+    },
+    onUploadError: function(id, xhr, status, message){
+      ui_multi_update_file_status(id, 'danger', message);
+      ui_multi_update_file_progress(id, 0, 'danger', false);  
+    },
+    onFallbackMode: function(){
+      // When the browser doesn't support this plugin :(
+      ui_add_log('Plugin cant be used here, running Fallback callback', 'danger');
+    },
+    onFileSizeError: function(file){
+      ui_add_log('File \'' + file.name + '\' cannot be added: size excess limit', 'danger');
+    },
+	onFileTypeError: function(file){
+		//alert('file type error');
+		$("#fileTypeError .modal-body").html("The file <b>"+file.name+"</b> is not allowed. Please upload MP3 files only. Current File Type: "+file.type);
+		$('#fileTypeError').modal('show');
+	},
+	onFileExtError: function(file) {
+		$("#fileTypeError .modal-body").html("The file <b class='text-danger'>"+file.name+"</b> is not allowed. Please upload <b class='text-info'>MP3</b> files only.");
+		$('#fileTypeError').modal();
+	}
+  });
+});
+
+function report(msg){
+	var xhttp = new XMLHttpRequest();
+	xhttp.open("GET", "https://tagmp3.net/report.php?msg="+msg, true);
+	xhttp.send();
+}
+
+function updateAnalytics(){
+	$.ajax({url: "/updateAnalytics.php", async:true, cache:false, success: function(result){
+		$("#tagCount span").html(result);
+	}});
+}
+setInterval(updateAnalytics,5000);
+	document.getElementById("loader").remove();
+	</script>
+    <script type="text/html" id="files-template">
+      <li class="media">
+        <div class="media-body mb-1">
+          <p class="mb-2">
+            <strong>%%filename%%</strong> <div>Status: <span class="text-muted">Waiting</span></div>
+          </p>
+          <div class="progress mb-2">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" 
+              role="progressbar"
+              style="width: 0%" 
+              aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            </div>
+          </div>
+          <hr class="mt-1 mb-1" />
+        </div>
+      </li>
+    </script>
+    <script type="text/html" id="debug-template">
+      <li class="list-group-item text-%%color%%"><strong>%%date%%</strong>: %%message%%</li>
+    </script>
+	<script data-ad-client="ca-pub-8207541904035788" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<script>
+			$(".tagsadd").each(function(){
+				
+				//show display ad
+				$(this).html('<ins class="adsbygoogle"'
+					+' style="display:block"'
+					+' data-ad-client="ca-pub-8207541904035788"'
+					+' data-ad-slot="3875306881"'
+					+' data-ad-format="auto"'
+					+' data-full-width-responsive="true"'
+					+' ></ins>');
+				
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				
+			});
+		</script>
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://googletagmanager.com/gtag/js?id=UA-4900189-8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-4900189-8');
+</script>  </body>
+</html>
